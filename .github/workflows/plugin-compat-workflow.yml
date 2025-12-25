@@ -25,3 +25,19 @@ jobs:
     - name: 'Run the plugin-compat tests'
       run: |
         node ./scripts/run-yarn.js test:plugin-compat
+    - name: 'Check Runner Info'
+      run: |
+          echo "Running on GCP VM inside K3s!"
+          hostname
+          uname -a
+    - name: 'Display System Specs'
+      run: |
+          echo "------------------ CPU Info ------------------"
+          echo "CPU Threads: $(nproc)"
+          lscpu | grep 'Model name'
+          
+          echo "------------------ Memory Info ------------------"
+          free -h
+          
+          echo "------------------ Disk Space ------------------"
+          df -h /
