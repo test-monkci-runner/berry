@@ -15,7 +15,7 @@ name: 'plugin-compat'
 jobs:
   plugin-compat:
     name: 'Testing plugin-compat'
-    runs-on: arc-runner-set
+    runs-on: arc-runner-berry-c4
 
     steps:
     - uses: actions/checkout@v4
