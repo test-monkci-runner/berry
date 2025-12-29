@@ -27,7 +27,7 @@ jobs:
       matrix:
         platform:
         - ubuntu-latest
-        - windows-latest
+        - blacksmith-4vcpu-windows-2025
 
     name: 'Validating Angular install via node-modules linker on ${{matrix.platform}}'
     runs-on: ${{matrix.platform}}

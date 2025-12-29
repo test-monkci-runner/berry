@@ -13,7 +13,7 @@ name: 'Release Candidate'
 jobs:
   release:
     name: 'Releasing a RC'
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2404
 
     env:
       NODE_OPTIONS: --max_old_space_size=8192
