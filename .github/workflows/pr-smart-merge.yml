@@ -6,7 +6,7 @@ name: 'Smart merge'
 jobs:
   reset:
     name: 'Remove the label'
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2404
     if: |
       github.event.label.name == 'infra: pending update'
 
@@ -24,7 +24,7 @@ jobs:
 
   generate:
     name: 'Generate an update changeset'
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2404
     needs: reset
     permissions:
       contents: read
@@ -88,7 +88,7 @@ jobs:
 
   apply:
     name: 'Apply the update changeset'
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2404
     needs: generate
 
     steps:
